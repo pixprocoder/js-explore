@@ -7,6 +7,24 @@ function sumOfAnArray(numbers) {
   return sum;
 }
 
-const numbers = [22, 35, 22, 56, 66, 91, 100, 532];
+// get odd numbers
+function getOddNumbersOfAnArray(numbers) {
+  let oddNumbers = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const element = numbers[i];
+    if (element % 2 !== 0) {
+      oddNumbers.push(element);
+    }
+  }
+  return oddNumbers;
+}
+
+const numbers = [22, 35, 22, 56, 66, 91, 100, 1, 63, 7, 532];
+const oddNumbersArray = getOddNumbersOfAnArray(numbers);
+
+// console.log(oddNumbersArray);
+
 const total = sumOfAnArray(numbers);
-console.log(total);
+const oddNumberSum = sumOfAnArray(oddNumbersArray);
+console.log(oddNumberSum);
+// console.log(total);
