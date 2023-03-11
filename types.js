@@ -21,7 +21,7 @@ console.log(typeof name);
 var isHappy = true;
 console.log(typeof isHappy);
 
-// modulus or reminder hello world
+// modulus or reminder
 var price1 = 34;
 var person = 5;
 var sum = price1 % person;
