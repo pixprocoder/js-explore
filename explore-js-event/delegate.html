@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Delegate</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center">Delegate</h1>
+    <section>
+      <ul id="ul" class="text-center list-none">
+        <li class="item">Lorem, ipsum.</li>
+        <li class="item">Culpa, animi!</li>
+        <li class="item">Dolore, laudantium!</li>
+        <li class="item">Aliquid, itaque.</li>
+        <li class="item">Eos, obcaecati.</li>
+        <li class="item">Numquam, alias.</li>
+      </ul>
+
+      <button id="btn" class="btn btn-primary w-25 mx-auto d-block">Add</button>
+    </section>
+
+    <script>
+      //   const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     item.addEventListener("click", function (e) {
+      //       e.target.parentNode.removeChild(e.target);
+      //     });
+      //   }
+
+      const listContainer = document
+        .getElementById("ul")
+        .addEventListener("click", function (e) {
+          e.target.parentNode.removeChild(e.target);
+        });
+
+      document.getElementById("btn").addEventListener("click", function () {
+        const parentContainer = document.getElementById("ul");
+
+        const li = document.createElement("li");
+        li.innerText = "Brand New";
+        li.classList.add("item");
+        parentContainer.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
