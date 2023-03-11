@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event summary</title>
+  </head>
+  <body>
+    <h1>Event in js</h1>
+    <p id="change">I will be changed</p>
+    <button onclick="changeText()">Change</button>
+    <button id="event-handler">Another</button>
+    <hr />
+    <section>
+      <p id="update-text"></p>
+      <input id="inputField" type="text" />
+      <button id="btn">UPDATE</button>
+    </section>
+    <script>
+      //   Option 2 recap
+      document.getElementById("btn").addEventListener("click", function () {
+        const inputField = document.getElementById("inputField");
+        const inputValue = inputField.value;
+        const p = document.getElementById("update-text");
+        p.innerText = inputValue;
+        inputField.value = "";
+      });
+
+      // option 1
+      function changeText() {
+        const h1 = document.querySelector("h1");
+        if (h1.innerText === "Event in js") {
+          h1.innerText = "JS IN PLACE";
+        } else {
+          h1.innerText = "Event in js";
+        }
+
+        //   option 2
+        document
+          .getElementById("event-handler")
+          .addEventListener("click", function () {
+            document.getElementById("change").innerText =
+              "Yes I am changed!!! Thanks";
+          });
+      }
+    </script>
+  </body>
+</html>
