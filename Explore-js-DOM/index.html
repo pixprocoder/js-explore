@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exploring JS Dom</title>
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <h1>Welcome to JS dom</h1>
+    <main id="main-container">
+      <section class="section-container">
+        <h1>section-title-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+          obcaecati, rerum explicabo cum alias mollitia vel delectus.
+          Consequatur cum soluta, quam accusantium maxime nihil molestias
+          corporis dolor voluptatem nemo autem modi cupiditate error?
+          Cupiditate.<br /><button>clickNow</button>
+        </p>
+      </section>
+      <section class="section-container">
+        <h1>section-title-2</h1>
+        <p>
+          Aperiam beatae facere officiis animi quibusdam recusandae facilis
+          saepe atque, aliquid illo magni, voluptatibus harum fuga neque ipsa?
+          Delectus officiis quis esse eaque eius dolor repudiandae aperiam
+          explicabo doloremque vitae? Eaque molestias delectus at?<br /><button>
+            clickNow
+          </button>
+        </p>
+      </section>
+      <section class="section-container">
+        <h1 id="section-title">section-title-3</h1>
+        <p>
+          Consequatur, reprehenderit rerum. Alias aperiam quos dolor consectetur
+          sapiente! Blanditiis, delectus aliquid explicabo reiciendis facere
+          vitae, officiis voluptates quas voluptatem quibusdam quaerat dolor
+          laudantium eum voluptatum quidem error. Omnis ab minus culpa nostrum
+          ex!<br /><button id="btn">clickNow</button>
+        </p>
+      </section>
+    </main>
+
+    <ul>
+      <li>Document</li>
+      <li>Object</li>
+      <li>Model</li>
+    </ul>
+    <script src="js/index.js"></script>
+    <script>
+      // giving style to the section
+      // approach 1
+      const sectionStyle = document.getElementsByTagName("section");
+      // approach 2
+      const byClassName = document.getElementsByClassName("section-container");
+      // approach 3
+      const byId = document.getElementById("section-title");
+      byId.style.color = "red";
+      // approach 4
+      const byQuery = document.querySelector(".section-container");
+      // approach 5
+      const byQueryAll = document.querySelectorAll("#btn");
+    </script>
+  </body>
+</html>
