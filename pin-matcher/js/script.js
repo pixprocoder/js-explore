@@ -37,3 +37,28 @@ document.getElementById("calculator").addEventListener("click", function (e) {
     typedField.value = newTypedChar;
   }
 });
+
+document.getElementById("submit-btn").addEventListener("click", function () {
+  const displayPinField = document.getElementById("display-pin");
+  const currentPin = displayPinField.value;
+
+  const typedPinField = document.getElementById("typed-field");
+  const typedPin = typedPinField.value;
+
+  if (currentPin === "") {
+    alert("please generate pin first");
+    typedPinField.value = "";
+  } else {
+    const inCorrectMessage = document.getElementById("pin-incorrect");
+    const successMessage = document.getElementById("pin-success");
+    if (typedPin === currentPin) {
+      successMessage.style.display = "block";
+      inCorrectMessage.style.display = "none";
+      typedPinField.value = "";
+    } else {
+      inCorrectMessage.style.display = "block";
+      successMessage.style.display = "none";
+      typedPinField.value = "";
+    }
+  }
+});
