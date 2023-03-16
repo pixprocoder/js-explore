@@ -55,6 +55,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
       successMessage.style.display = "block";
       inCorrectMessage.style.display = "none";
       typedPinField.value = "";
+      displayPinField.value = "";
     } else {
       inCorrectMessage.style.display = "block";
       successMessage.style.display = "none";
