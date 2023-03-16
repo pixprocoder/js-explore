@@ -18,3 +18,22 @@ document.getElementById("generate-pin").addEventListener("click", function () {
   const displayPin = document.getElementById("display-pin");
   displayPin.value = pin;
 });
+
+document.getElementById("calculator").addEventListener("click", function (e) {
+  const character = e.target.innerText;
+  const typedField = document.getElementById("typed-field");
+  const previousTypedChar = typedField.value;
+  if (isNaN(character)) {
+    if (character === "C") {
+      typedField.value = "";
+    } else if (character === "<") {
+      const digits = previousTypedChar.split("");
+      digits.pop();
+      const remainingDigits = digits.join("");
+      typedField.value = remainingDigits;
+    }
+  } else {
+    const newTypedChar = previousTypedChar + character;
+    typedField.value = newTypedChar;
+  }
+});
