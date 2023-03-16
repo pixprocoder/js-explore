@@ -18,14 +18,13 @@ let propertyValue = student[studentLocation];
 console.log(student);
 
 // get all keys and values  of an object
-let allKeys = Object.keys(student);
 // console.log(allKeys);
-let allValues = Object.values(student);
+let allKeys = Object.keys(student);
 // console.log(allValues);
+let allValues = Object.values(student);
 
 // set properties value
 student.name = "sahrul"; // System 1
 student["batch"] = "gb-2000"; // System 2
 student[propertyValue] = "Dhaka";
-
 console.log(student);

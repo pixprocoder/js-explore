@@ -6,11 +6,11 @@ let num = 10;
 //   num--;
 // }
 
-// for loop odd number
+// for loop even numbers
 for (let i = 10; i >= 1; i -= 2) {
-  //   console.log(i);
-}
-// for loop even number
-for (let i = 11; i >= 1; i -= 2) {
   console.log(i);
+}
+// for loop odd number
+for (let i = 11; i >= 1; i -= 2) {
+  // console.log(i);
 }
