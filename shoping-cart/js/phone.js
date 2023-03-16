@@ -18,21 +18,6 @@ function updateTotalPhonePrice(newPhoneQuantity) {
   totalPhonePriceElement.innerText = totalPhonePrice;
 }
 
-function getTextElementValueById(elementId) {
-  const phoneTotalElement = document.getElementById(elementId);
-  const currentPhoneTotal = parseInt(phoneTotalElement.innerText);
-  return currentPhoneTotal;
-}
-
-function calculateSubTotal() {
-  // calculate total
-  const currentPhoneTotal = getTextElementValueById("phone-total-price");
-  const currentCaseTotal = getTextElementValueById("case-total-price");
-  const currentSubTotal = currentPhoneTotal + currentCaseTotal;
-  const subTotalElement = document.getElementById("sub-total");
-  subTotalElement.innerText = currentSubTotal;
-}
-
 document
   .getElementById("btn-phone-plus")
   .addEventListener("click", function () {

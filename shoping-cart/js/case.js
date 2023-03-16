@@ -20,6 +20,7 @@ function updateTotalCasePrice(newCaseNumber) {
 document.getElementById("btn-case-plus").addEventListener("click", function () {
   const newCaseNumber = updateCaseNumber(true);
   updateTotalCasePrice(newCaseNumber);
+  calculateSubTotal();
 });
 
 document
@@ -27,4 +28,5 @@ document
   .addEventListener("click", function () {
     const newCaseNumber = updateCaseNumber(false);
     updateTotalCasePrice(newCaseNumber);
+    calculateSubTotal();
   });
