@@ -12,3 +12,5 @@
 // implicitly exclusively
 
 // 31-7 Spread operator, array max, copy arrays
+
+// 31-8 (advanced) Object and Array Destructuring
