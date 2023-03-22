@@ -6,3 +6,8 @@ here you go
 `;
 console.log(temp);
 console.log(result);
+
+/**
+ * Interview question
+ * Difference between function declaration, function expression and arrow function
+ */
