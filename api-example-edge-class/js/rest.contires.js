@@ -5,13 +5,11 @@ const loadCountries = () => {
 };
 
 const displayCountries = (countries) => {
-  for (const country of countries) {
+  countries.forEach((country) => {
     console.log(country);
     const img = country.flags.png;
     const name = country.name.common;
     const area = country.area;
-    console.log(area);
-
     const parentDiv = document.getElementById("container");
     const countryDiv = document.createElement("div");
     countryDiv.innerHTML = `
@@ -23,7 +21,7 @@ const displayCountries = (countries) => {
     `;
     countryDiv.classList.add("country");
     parentDiv.appendChild(countryDiv);
-  }
+  });
 };
 
 loadCountries();
