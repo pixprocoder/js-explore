@@ -6,11 +6,10 @@ const loadCountries = () => {
 
 const displayCountries = (countries) => {
   countries.forEach((country) => {
-    console.log(country);
+    const parentDiv = document.getElementById("container");
     const img = country.flags.png;
     const name = country.name.common;
     const area = country.area;
-    const parentDiv = document.getElementById("container");
     const countryDiv = document.createElement("div");
     countryDiv.innerHTML = `
     <img src=${img} alt="">

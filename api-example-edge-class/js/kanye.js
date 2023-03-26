@@ -1,8 +1,12 @@
 const loadQuotes = async () => {
-  const url = "https://api.kanye.rest/";
-  const res = await fetch(url);
-  const data = await res.json();
-  displayQuote(data);
+  try {
+    const url = "https://api.kanye.rest/";
+    const res = await fetch(url);
+    const data = await res.json();
+    displayQuote(data);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const displayQuote = (quote) => {
