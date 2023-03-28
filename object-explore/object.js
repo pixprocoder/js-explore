@@ -1,0 +1,14 @@
+const myObj = {};
+myObj.name = "kabir";
+myObj.price = 334;
+const keys = Object.keys(myObj);
+const value = Object.values(myObj);
+const pair = Object.entries(myObj);
+// console.log(pair);
+// console.log(keys);
+// console.log(value);
+// Object.seal(myObj);
+// Object.freeze(myObj);
+myObj.price = 22;
+delete myObj.price;
+console.log(myObj);
